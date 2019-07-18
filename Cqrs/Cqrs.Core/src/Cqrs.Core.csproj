@@ -1,0 +1,179 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A8FCD0BF-04FC-4628-B376-6861D63D9538}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Cqrs</RootNamespace>
+    <AssemblyName>Cqrs.Core</AssemblyName>
+    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Release\Cqrs.Core.xml</DocumentationFile>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Database\AggregateRoot.cs" />
+    <Compile Include="Database\AggregateRootException.cs" />
+    <Compile Include="Messaging\CommandStatus.cs" />
+    <Compile Include="Infrastructure\Entity.cs" />
+    <Compile Include="Database\IAggregateRoot.cs" />
+    <Compile Include="Infrastructure\IEntity.cs" />
+    <Compile Include="Database\IRepository.cs" />
+    <Compile Include="Database\IRepositoryContext.cs" />
+    <Compile Include="Database\IRepositoryContextFactory.cs" />
+    <Compile Include="EventSourcing\Streams\EmptySnapshotStore.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Infrastructure\ModelValidationResult.cs" />
+    <Compile Include="Infrastructure\Storage\DataContextBase.cs" />
+    <Compile Include="Infrastructure\Storage\IDataContext.cs" />
+    <Compile Include="Infrastructure\Storage\IDataContextFactory.cs" />
+    <Compile Include="Infrastructure\ILifecycle.cs" />
+    <Compile Include="Infrastructure\IValidatable.cs" />
+    <Compile Include="Infrastructure\LifecycleVeto.cs" />
+    <Compile Include="Infrastructure\Stores\DefaultEventPublishedVersionStore.cs" />
+    <Compile Include="Messaging\ICommandResult.cs" />
+    <Compile Include="Messaging\Queue\DefaultMessageQueueFactory.cs" />
+    <Compile Include="Messaging\Queue\MessageData.cs" />
+    <Compile Include="Messaging\Runtime\EventPublishedVersionData.cs" />
+    <Compile Include="Messaging\Runtime\EventPublishedVersionInMemory.cs" />
+    <Compile Include="Messaging\Runtime\EventStream.cs" />
+    <Compile Include="Infrastructure\Repositories\DefaultEventSourcedRepository.cs" />
+    <Compile Include="Infrastructure\Repositories\DefaultRepositoryContextFactory.cs" />
+    <Compile Include="Infrastructure\ValueObject.cs" />
+    <Compile Include="EventSourcing\Streams\EventData.cs" />
+    <Compile Include="EventSourcing\EventSourced.cs" />
+    <Compile Include="EventSourcing\EventSourcedException.cs" />
+    <Compile Include="EventSourcing\IEventSourced.cs" />
+    <Compile Include="EventSourcing\IEventSourcedRepository.cs" />
+    <Compile Include="EventSourcing\Streams\IEventStore.cs" />
+    <Compile Include="Infrastructure\Stores\DefaultEventStore.cs" />
+    <Compile Include="EventSourcing\Streams\ISnapshotStore.cs" />
+    <Compile Include="EventSourcing\Streams\SnapshotData.cs" />
+    <Compile Include="EventSourcing\SnapshotPolicyAttribute.cs" />
+    <Compile Include="Infrastructure\AbstractTypeCodeProvider.cs" />
+    <Compile Include="Infrastructure\DefaultTypeCodeProvider.cs" />
+    <Compile Include="Infrastructure\Stores\DefaultHandlerRecordStore.cs" />
+    <Compile Include="Infrastructure\Stores\DefaultMessageStore.cs" />
+    <Compile Include="Infrastructure\Stores\DefaultSnapshotStore.cs" />
+    <Compile Include="Messaging\Runtime\EventStreamHandler.cs" />
+    <Compile Include="Messaging\Runtime\IEventPublishedVersionStore.cs" />
+    <Compile Include="Messaging\Runtime\IMessageExecutor.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Messaging\Runtime\IMessageProcessor.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Messaging\IRouter.cs" />
+    <Compile Include="Messaging\Handling\HandlerRecordData.cs" />
+    <Compile Include="Messaging\Handling\HandlerRecordInMemory.cs" />
+    <Compile Include="Infrastructure\IMemoryCache.cs" />
+    <Compile Include="Messaging\IHandler.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Messaging\Queue\IMessageQueue.cs" />
+    <Compile Include="Messaging\Queue\IMessageQueueFactory.cs" />
+    <Compile Include="Messaging\Queue\IMessageStore.cs" />
+    <Compile Include="Infrastructure\IProcessor.cs" />
+    <Compile Include="Infrastructure\ITypeCodeProvider.cs" />
+    <Compile Include="Infrastructure\DefaultMemoryCache.cs" />
+    <Compile Include="Infrastructure\Repositories\Repository.cs" />
+    <Compile Include="Infrastructure\TypeHelper.cs" />
+    <Compile Include="Messaging\Runtime\AbstractBus.cs" />
+    <Compile Include="Messaging\Command.cs" />
+    <Compile Include="Messaging\CommandHandlerNotFoundException.cs" />
+    <Compile Include="Messaging\CommandHandlerTooManyException.cs" />
+    <Compile Include="Messaging\Handling\IHandlerRecordStore.cs" />
+    <Compile Include="Messaging\IMessage.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Messaging\Handling\DefaultHandlerProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Messaging\Handling\HandlerWrapper.cs" />
+    <Compile Include="Messaging\Handling\IProxyHandler.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Messaging\IInterceptor.cs" />
+    <Compile Include="Messaging\Message.cs" />
+    <Compile Include="Messaging\Event.cs" />
+    <Compile Include="Messaging\EventHandlerNotFoundException.cs" />
+    <Compile Include="Messaging\Handling\IHandlerProvider.cs" />
+    <Compile Include="Messaging\ICommand.cs" />
+    <Compile Include="Messaging\ICommandBus.cs" />
+    <Compile Include="Messaging\IEvent.cs" />
+    <Compile Include="Messaging\IEventBus.cs" />
+    <Compile Include="Messaging\IEventPublisher.cs" />
+    <Compile Include="Messaging\IVersionedEvent.cs" />
+    <Compile Include="Messaging\Runtime\DefaultCommandProcessor.cs" />
+    <Compile Include="Messaging\Runtime\DefaultCommandBus.cs" />
+    <Compile Include="Messaging\Runtime\DefaultCommandExecutor.cs" />
+    <Compile Include="Messaging\Runtime\DefaultEventBus.cs" />
+    <Compile Include="Messaging\IRetry.cs" />
+    <Compile Include="Messaging\Runtime\MessageExecutor.cs" />
+    <Compile Include="Messaging\Runtime\MessageProcessor.cs" />
+    <Compile Include="Messaging\Runtime\DefaultEventExecutor.cs" />
+    <Compile Include="Messaging\Runtime\DefaultEventProcessor.cs" />
+    <Compile Include="Messaging\Runtime\ICommandExecutor.cs" />
+    <Compile Include="Messaging\Runtime\ICommandProcessor .cs" />
+    <Compile Include="Messaging\Runtime\IEventExecutor.cs" />
+    <Compile Include="Messaging\Runtime\IEventProcessor.cs" />
+    <Compile Include="Messaging\VersionedEvent.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="SqlScripts\mssql.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Cqrs.Common\src\Cqrs.Common.csproj">
+      <Project>{4059bfa2-5175-4c25-8b60-c99ff5c3bcc2}</Project>
+      <Name>Cqrs.Common</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

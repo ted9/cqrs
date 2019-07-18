@@ -1,0 +1,128 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4059BFA2-5175-4C25-8B60-C99FF5C3BCC2}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Cqrs</RootNamespace>
+    <AssemblyName>Cqrs.Common</AssemblyName>
+    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;TINYIOC_INTERNAL</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE;TINYIOC_INTERNAL</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Release\Cqrs.Common.xml</DocumentationFile>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Caching\Cache.cs" />
+    <Compile Include="Caching\CacheRegionAttribute.cs" />
+    <Compile Include="Caching\CachingAttribute.cs" />
+    <Compile Include="Caching\CachingMethod.cs" />
+    <Compile Include="Caching\ICache.cs" />
+    <Compile Include="Caching\ICacheProvider.cs" />
+    <Compile Include="Caching\WebCache\WebCache.cs" />
+    <Compile Include="Caching\WebCache\WebCacheConfig.cs" />
+    <Compile Include="Caching\WebCache\WebCacheProvider.cs" />
+    <Compile Include="Caching\WebCache\WebCacheSectionHandler.cs" />
+    <Compile Include="Components\IInitializer.cs" />
+    <Compile Include="Components\IContainer.cs" />
+    <Compile Include="Components\LifeCycleAttribute.cs" />
+    <Compile Include="Components\LifetimeStyle.cs" />
+    <Compile Include="Components\ObjectContainer.cs" />
+    <Compile Include="Components\ContainerExtentions.cs" />
+    <Compile Include="Components\RegisteredComponentAttribute.cs" />
+    <Compile Include="Components\RequiredComponentAttribute.cs" />
+    <Compile Include="Configurations\Configuration.cs" />
+    <Compile Include="Contexts\CallContext.cs" />
+    <Compile Include="Contexts\ContextManager.cs" />
+    <Compile Include="Contexts\CurrentContext.cs" />
+    <Compile Include="Contexts\IContext.cs" />
+    <Compile Include="Contexts\IContextManager.cs" />
+    <Compile Include="Contexts\ICurrentContext.cs" />
+    <Compile Include="Contexts\OperationContext.cs" />
+    <Compile Include="Contexts\ThreadContext.cs" />
+    <Compile Include="Contexts\WebContext.cs" />
+    <Compile Include="Infrastructure\Scheduling\Dispatcher.cs" />
+    <Compile Include="Infrastructure\Scheduling\LimitedConcurrencyLevelTaskScheduler.cs" />
+    <Compile Include="Infrastructure\Scheduling\Worker.cs" />
+    <Compile Include="Infrastructure\PageResult.cs" />
+    <Compile Include="Infrastructure\IUnitOfWork.cs" />
+    <Compile Include="Extensions\ConcurrentDictionaryExtensions.cs" />
+    <Compile Include="Extensions\DataReaderExtentions.cs" />
+    <Compile Include="Extensions\DbConnectionExtentions.cs" />
+    <Compile Include="Extensions\EnumerableExtentions.cs" />
+    <Compile Include="Extensions\ExpressionFuncExtender.cs" />
+    <Compile Include="Extensions\HttpRequestBaseExtensions.cs" />
+    <Compile Include="Extensions\ObjectExtentions.cs" />
+    <Compile Include="Extensions\ReaderWriterLockSlimExtensions.cs" />
+    <Compile Include="Extensions\ReflectionExtentions.cs" />
+    <Compile Include="Extensions\TypeExtensions.cs" />
+    <Compile Include="Infrastructure\Logging\DefaultLoggerFactory.cs" />
+    <Compile Include="Infrastructure\Logging\ILogger.cs" />
+    <Compile Include="Infrastructure\Logging\ILoggerFactory.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Infrastructure\Serialization\DefaultBinarySerializer.cs" />
+    <Compile Include="Infrastructure\Serialization\DefaultTextSerializer.cs" />
+    <Compile Include="Infrastructure\Serialization\IBinarySerializer.cs" />
+    <Compile Include="Infrastructure\Serialization\ITextSerializer.cs" />
+    <Compile Include="Infrastructure\Serialization\SerializerExtensions.cs" />
+    <Compile Include="CqrsException.cs" />
+    <Compile Include="Infrastructure\Utilities\CryptoUtils.cs" />
+    <Compile Include="DisposableObject.cs" />
+    <Compile Include="Ensure.cs" />
+    <Compile Include="Infrastructure\Utilities\FileUtils.cs" />
+    <Compile Include="Infrastructure\Utilities\GuidUtil.cs" />
+    <Compile Include="Infrastructure\Utilities\HttpUtils.cs" />
+    <Compile Include="Infrastructure\Utilities\LockUtil.cs" />
+    <Compile Include="Infrastructure\Utilities\ObjectUtils.cs" />
+    <Compile Include="Infrastructure\Utilities\RandomUtils.cs" />
+    <Compile Include="Infrastructure\Utilities\TypeConvert.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

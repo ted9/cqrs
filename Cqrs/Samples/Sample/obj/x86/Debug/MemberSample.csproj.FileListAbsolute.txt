@@ -1,0 +1,10 @@
+C:\Work\Lab\dotnet\imyounghan\thinknet-43090\Samples\MemberSample\bin\Debug\MemberSample.exe.config
+C:\Work\Lab\dotnet\imyounghan\thinknet-43090\Samples\MemberSample\bin\Debug\MemberSample.exe
+C:\Work\Lab\dotnet\imyounghan\thinknet-43090\Samples\MemberSample\bin\Debug\MemberSample.pdb
+C:\Work\Lab\dotnet\imyounghan\thinknet-43090\Samples\MemberSample\bin\Debug\ThinkNet.Common.dll
+C:\Work\Lab\dotnet\imyounghan\thinknet-43090\Samples\MemberSample\bin\Debug\ThinkNet.Kernel.dll
+C:\Work\Lab\dotnet\imyounghan\thinknet-43090\Samples\MemberSample\bin\Debug\ThinkNet.Common.pdb
+C:\Work\Lab\dotnet\imyounghan\thinknet-43090\Samples\MemberSample\bin\Debug\ThinkNet.Kernel.pdb
+C:\Work\Lab\dotnet\imyounghan\thinknet-43090\Samples\MemberSample\obj\x86\Debug\MemberSample.csprojResolveAssemblyReference.cache
+C:\Work\Lab\dotnet\imyounghan\thinknet-43090\Samples\MemberSample\obj\x86\Debug\MemberSample.exe
+C:\Work\Lab\dotnet\imyounghan\thinknet-43090\Samples\MemberSample\obj\x86\Debug\MemberSample.pdb

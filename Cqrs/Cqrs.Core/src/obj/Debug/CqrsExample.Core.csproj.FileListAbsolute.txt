@@ -1,0 +1,14 @@
+C:\Work\Lab\dotnet\imyounghan\thinknet-43090\CqrsExample.Core\src\bin\Debug\CqrsExample.Core.dll
+C:\Work\Lab\dotnet\imyounghan\thinknet-43090\CqrsExample.Core\src\bin\Debug\CqrsExample.Core.pdb
+C:\Work\Lab\dotnet\imyounghan\thinknet-43090\CqrsExample.Core\src\bin\Debug\CqrsExample.Common.dll
+C:\Work\Lab\dotnet\imyounghan\thinknet-43090\CqrsExample.Core\src\bin\Debug\CqrsExample.Common.pdb
+C:\Work\Lab\dotnet\imyounghan\thinknet-43090\CqrsExample.Core\src\obj\Debug\CqrsExample.Core.csprojResolveAssemblyReference.cache
+C:\Work\Lab\dotnet\imyounghan\thinknet-43090\CqrsExample.Core\src\obj\Debug\CqrsExample.Core.dll
+C:\Work\Lab\dotnet\imyounghan\thinknet-43090\CqrsExample.Core\src\obj\Debug\CqrsExample.Core.pdb
+C:\Work\Lab\dotnet\imyounghan\thinknet-43090\Cqrs\CqrsExample.Core\src\bin\Debug\CqrsExample.Core.dll
+C:\Work\Lab\dotnet\imyounghan\thinknet-43090\Cqrs\CqrsExample.Core\src\bin\Debug\CqrsExample.Core.pdb
+C:\Work\Lab\dotnet\imyounghan\thinknet-43090\Cqrs\CqrsExample.Core\src\bin\Debug\CqrsExample.Common.dll
+C:\Work\Lab\dotnet\imyounghan\thinknet-43090\Cqrs\CqrsExample.Core\src\bin\Debug\CqrsExample.Common.pdb
+C:\Work\Lab\dotnet\imyounghan\thinknet-43090\Cqrs\CqrsExample.Core\src\obj\Debug\CqrsExample.Core.csprojResolveAssemblyReference.cache
+C:\Work\Lab\dotnet\imyounghan\thinknet-43090\Cqrs\CqrsExample.Core\src\obj\Debug\CqrsExample.Core.dll
+C:\Work\Lab\dotnet\imyounghan\thinknet-43090\Cqrs\CqrsExample.Core\src\obj\Debug\CqrsExample.Core.pdb
